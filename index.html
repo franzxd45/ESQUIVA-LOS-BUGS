@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Franz Ramos Choque y Jhoyci Stacy Grageda Jimenez">
+  <meta name="description" content="Pagina de un juego ludica y educativo para aprender programacion">
+  <title>ESQUIVA LOS BUGS</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>ESQUIVA LOS BUGS</h1>
+  </header>
+  <main>
+    <section id="instrucciones">
+      <h2>REGLAS DEL JUEGO</h2>
+      <article>
+        <p><strong>OBJETIVO:</strong> Forma 10 palabras de programación recolectando letras en orden. Si agarras una letra incorrecta, se reinicia tu palabra.</p>
+        <p><strong>SIGNIFICADO DE LOS OBJETOS QUE CAEN:</strong> Bug rojo (-1 vida), Virus morado (relentiza por 3 segundos), Café (+5 pts y velocidad extra por 3s), Letras A-Z.</p>
+        <p><strong>PALABRAS RELACIONADAS A PROGRAMACION:</strong> "BUG", "VIRUS", "CODIGO", "VARIABLE", "BUCLE", "ERROR", "FUNCION", "HTML", "NUMERO", "CSS", "OBJETO", "CLASE", "BASE", "SERVIDOR", "WEB", "USUARIO", "JAVA"</p>
+        <p><strong>GANAR:</strong> Gana quien forme 10 palabras seguidas o tenga más puntos en 3 minutos</p>
+
+      </article>
+    </section>
+    <section id="juego">
+      <h2>JUGADOR (Rosa) | NEMESIS IA (Celeste)</h2>
+      <canvas id="juegoCanvas" width="1600" height="1000"></canvas>
+      <div class="botones-principales">
+        <button id="btnIniciar">▶ Iniciar</button>
+        <button id="btnPausar">⏸ Pausar</button>
+        <button id="btnReiniciar">↺ Reiniciar</button>
+      </div>
+      <p id="mensajeFinal">PRESIONA INICIAR PARA JUGAR</p>
+    </section>
+
+    <section id="controles">
+      <button id="btnIzquierda">← Izquierda</button>
+      <button id="btnDerecha">Derecha →</button>
+      <button id="btnGirar">🔄 Girar Pantalla</button>
+    </section>
+  </main>
+  <script src="js/codigo.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+} 
+/* 
+  - Aplica la regla a absolutamente todos los elementos de la página.
+  - box-sizing hace que los bordes y el relleno (padding) se incluyan dentro del ancho y alto total que le asignas a una caja, evitando que los elementos se desborden o rompan el diseño.
+  - margin: Elimina los márgenes y rellenos que los navegadores web ponen por defecto en todas las páginas, dejándonos una pizarra limpia para diseñar desde cero.
+*/
+body {   
+  background-color: #0a0e1a; 
+  color: #c893eb;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  padding: 10px;
+}
+/* 
+  - background-color: Pinta todo el fondo de la página web de un color azul muy oscuro y moderno.
+  - color: Define el color general para todo el texto de la página (un gris clarito muy fácil de leer).
+  - font-family: Selecciona la tipografía de las letras. Usará Arial y, si el dispositivo no la tiene, cualquier otra fuente limpia y sin adornos (sans-serif).
+  - line-height: Da un espacio vertical adecuado entre cada renglón de texto para que no se amontonen.
+  - padding: Deja un pequeño margen de 10 píxeles de espacio libre alrededor de toda la ventana del navegador.
+*/
+header { 
+  background: linear-gradient(to right, red, yellow, green);
+  border: 1px solid #020813;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+header h1 { 
+  font-size: 18px; 
+  color: #070613; 
+} 
+
+strong { 
+  font-size: 12px; 
+  color: #f5c30f; 
+  margin-top: 4px; 
+}
+
+main { 
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+section { 
+  background-color: #141c2f;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+h2 { 
+  font-size: 14px; 
+  color: #2afd7b; 
+  margin-bottom: 8px; 
+} 
+
+p { 
+  font-size: 13px; 
+  margin-bottom: 6px; 
+}
+
+#juego {  
+  text-align: center; 
+  overflow: hidden;
+}
+
+#juegoCanvas { 
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  max-height: 75vh;
+  background-color: #020617; 
+  border: 2px solid #22d3ee;
+  border-radius: 8px;
+  display: block;
+  margin: 10px auto;
+  touch-action: manipulation; 
+  user-select: none;
+}
+/* 
+  - width: 100% y max-width: 1200px;: Configura un ancho responsivo que se adapta pero no excede los 1200px.
+  - height: auto y max-height: Mantiene la proporción y limita la altura máxima al 75% de la pantalla visible.
+  - background-color: Fondo muy oscuro específico para el área donde corre el juego.
+  - border y border-radius: Añade un borde brillante cian y esquinas redondeadas.
+  - margin: Centra el canvas horizontalmente.
+  - touch-action: Optimiza el comportamiento táctil en dispositivos móviles.
+  - user-select: Impide que el usuario seleccione texto o elementos gráficos accidentalmente al hacer clic o tocar rápido.
+*/
+.botones-principales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.botones-principales button {
+  min-width: 120px;
+}
+
+#mensajeFinal {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e61212;
+  min-height: 24px;
+  margin-top: 8px;
+}
+
+#controles {
+  text-align: center;
+}
+
+button {
+  background-color: #1e293b;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+button:hover { 
+  background-color: #334155; 
+}
+
+#btnIniciar { 
+  background-color: #22d3ee; 
+  color: #000; 
+}
+
+#btnReiniciar { 
+  background-color: #ef4444; 
+  color: #fff; 
+}
+
+@media (orientation: portrait) {
+  #juegoCanvas { max-width: 100%; max-height: 60vh; }
+  body { padding: 6px; }
+}
+/* 
+  - Se activa cuando el celular está en posición vertical (portrait).
+  - Cambia los marcadores de 3 columnas a 2 columnas.
+  - Reduce la altura máxima del canvas al 60% y ajusta el padding general de la página a 6px.
+*/
+@media (orientation: landscape) {
+  #juegoCanvas { max-height: 80vh; }
+}
+/* 
+  - Se activa cuando el dispositivo está en posición horizontal (landscape).
+  - Permite que el canvas aproveche un poco más de altura (hasta el 80% de la pantalla).
+*/
+@media (max-width: 600px) {
+  header h1 { font-size: 14px; }
+  button { padding: 10px 14px; font-size: 13px; }
+  .botones-principales button { min-width: 95px; }
+}
+/* 
+  - Se activa en pantallas pequeñas (ancho menor o igual a 600px, como teléfonos móviles estándar).
+  - Reduce el tamaño del título principal, hace los botones un poco más compactos y ajusta el ancho mínimo de los botones principales a 95px.
+*/
